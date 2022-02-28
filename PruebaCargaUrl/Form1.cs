@@ -39,7 +39,8 @@ namespace PruebaCargaUrl
         // do it 
         private static Stream getUrl(string URL)
         {
-            URL = "https://lh3.googleusercontent.com/e40R8CokfUFCwx_hWTRJNKXSClNQxAi6Ua3eb8PYlrRUmnpmSlPjLBl4Tc0eLa0352H12xfIOV58WCQpOAQPhBAm8vczxG8EPmchkGWNRLTW9xcwmQ_-uJtaq5SXrw990cnh7vC637_HYYFlt4khKURrLfs8ZpB-yf81FduhgsBkzxPgcZ5wEuA2gDCuYkmxgux2ETxaGxupilx9GmGgl84BFppAQzj35lP4yFSd89iVmIupb4AztE5L4EEqmlIlp-69Qgy9oaQKpb1AHK3cBPcTmL9TzWJjkBTgkZxpFCL6juy2WcK6lHVrzhChNbTUXxCl0ZHDmFvKu84b3A80lTWBK2HZDVtElZbLsFHdfAZ0ohOu_6Q1A23UA6D4G6y0E0YWhYC3O-UG45n2COg3L6b_0e1yL4_O28j_svEPXPgTq_-t0GBFzwvT_uMdbHDQitD1H7L0U_lb-tEboSuOcWQwopSWcmaELsfsgbM2IRtL1Eyp7doOo58vgsYcfE5PkpLBTuNmaODt2P8m31VbIxa7JHZ5rqj26q_3aq2sFTIkTBEVoJAeDXB1FUWa4rt5vUyLjVPeIl0MlRi-FgJG779NdWsA9qKzvw4eAmYGtLjGM6IezYcaQaF1QEut0ndk8UzMRpyixtkcqMyu2U0aBJJw03bDAHWg1vrwgT8cRc8Uuk1286VnMwxWlRvbSM4cE50qNQ2-oEh82glHuTMA-gbv=w1295-h969-no?authuser=1";
+            URL = "https://lh3.googleusercontent.com/FXciY7Zdy4oxWkwwg9P2zUa07qSnJBmQUGkLMfV3JxEvJHV2P_-yuT_WybRbYhtfva5RUzijTDAgPhU3MHK23mbIVxz6JO1xviXVbylz31HJ0WnG3jRR-UcycJaas31n7OfbMg6-JcuGIRITBQv9VVF2SKaapLQ-eKYfPavWtQC-iklDXvhjXKYLZRthgFQ8oLwkmpn7NE4e92Mnv9K-WQDW30c1yfVDfknWYwpRejPF4ksu6mm7KTRDA6lFciVf4vTcYWpEi5wMrMKdGfbI0619oE-X32cmkn1HF7yF_GHmUNpeFToeK0lQVOtXnKtCsdar1_n-dqnbmIux39NcnZlpE0XwQSC1x353Nm16SjtLlZeC7wYR5M_-MR3qSbmnsxxYufz6Y822TXmiuPAWTfH54QyYvFpC_Z-ncmYxt0wxPsfP7ARiSkI5fmbq7wS5uNwe2PLq2-tu5hOvNFBhfThrA4VBHhOkyPKdL12E3ZBvfdwgJjUjk9-1l8s06lxeTd4TkrvhOgvdwAi7tpkc-RKGWAGcd5tk4wFMUYvkm8xg21dc9631b3TuyEebdVrfUr2nKPu-39uNA2k8kdRYnEDMBydH51DlZI4YZ6JUufGpc16XKFwjACJusotQCM_97au5oWVGxM-0U6Mo4mRZujN-kW9TxXpis1RZtjb8Pxpr8Q1edbH_GwzY1BG7c1Tat5c8h4T8_KuW5geVkhlIp2Cl=w1253-h937-no?authuser=0";
+
            // string strResp = "https://www.adslzone.net/app/uploads-adslzone.net/2019/04/borrar-fondo-imagen.jpg";
             HttpWebRequest request = ((HttpWebRequest)WebRequest.Create(URL));
 
