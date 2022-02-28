@@ -25,5 +25,13 @@ namespace PruebaCargaUrl
 
             this.Close();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            FrmLoadsubir Norvin = new FrmLoadsubir();
+            Norvin.ShowDialog();
+
+            this.Close();
+        }
     }
 }

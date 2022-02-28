@@ -47,7 +47,7 @@
             // btnCargarImagen
             // 
             this.btnCargarImagen.Location = new System.Drawing.Point(147, 314);
-            this.btnCargarImagen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCargarImagen.Margin = new System.Windows.Forms.Padding(4);
             this.btnCargarImagen.Name = "btnCargarImagen";
             this.btnCargarImagen.Size = new System.Drawing.Size(332, 120);
             this.btnCargarImagen.TabIndex = 1;
@@ -63,12 +63,13 @@
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Location = new System.Drawing.Point(728, 314);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(363, 138);
             this.guna2Button1.TabIndex = 2;
             this.guna2Button1.Text = "Subir";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // BtnSubir
             // 
@@ -79,7 +80,7 @@
             this.Controls.Add(this.btnCargarImagen);
             this.Controls.Add(this.lblHechoPorNorvin);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BtnSubir";
             this.Text = "FrmInicio";
             this.ResumeLayout(false);
