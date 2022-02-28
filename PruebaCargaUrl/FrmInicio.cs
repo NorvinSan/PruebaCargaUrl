@@ -10,11 +10,20 @@ using System.Windows.Forms;
 
 namespace PruebaCargaUrl
 {
-    public partial class FrmInicio : Form
+    public partial class BtnSubir : Form
     {
-        public FrmInicio()
+        public BtnSubir()
         {
             InitializeComponent();
+        }
+
+        private void btnCargarImagen_Click(object sender, EventArgs e)
+        {
+             
+            Form1  Norvin= new Form1();
+            Norvin.ShowDialog();    
+
+            this.Close();
         }
     }
 }
