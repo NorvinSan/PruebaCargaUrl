@@ -9,39 +9,53 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
-using CloudinaryDotNet.Core;
-using CloudinaryDotNet.Provisioning;
+
 
 
 namespace PruebaCargaUrl
 {
     public partial class FrmLoadsubir : Form
     {
+        //El stream,es una Transmisión de bytes que en conjunto contienen una imagen
         String imagen;
         public FrmLoadsubir()
         {
             InitializeComponent();
+            //En el inicializador se le asigna las credenciales del cervidor.
             cloud = new Cloudinary(A); 
             
         }
 
+        // se crea una valiblae statica de cloudinay
         public static Cloudinary cloud;
-        Account A = new Account("pandaop", "632968835138977", "GDDZ6eYUYF5_upckyKxZqbpQm8w");
+
+        //Se crea una variable Account A que contendra todos las credenciasles de nuestro servidor 
+        Account A = new Account("cloudname", "apikey", "apiSecret");
 
         private void CargarImagen(String ruta) {
+            //metodo try para capturar los posibles errores
+
             try
             {
+
+                //funcion de peticion para suvir una imagen A cloudinai
                 var uploadParams = new ImageUploadParams()
                 {
-                    File = new FileDescription(ruta),
+                    //se el apsa la ruta de la ubicacion del archivo.
+                    File = new FileDescription(ruta)
                 };
 
+                
+
+                //Funcion que obtiene resultado del la suvida .
                 var uploadResult = cloud.Upload(uploadParams);
 
                 ruta = uploadResult.SecureUri.ToString();
                 MessageBox.Show("Foto subida correctamente al servidor cloudinary");
 
                 ptbConfrirm.ImageLocation = @"" + ruta;
+
+                MessageBox.Show(@""+ruta);
             }
             catch (Exception ex)
             {
