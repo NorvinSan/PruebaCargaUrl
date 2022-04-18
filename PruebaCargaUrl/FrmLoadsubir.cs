@@ -22,15 +22,16 @@ namespace PruebaCargaUrl
         {
             InitializeComponent();
             //En el inicializador se le asigna las credenciales del cervidor.
-            cloud = new Cloudinary(A); 
-            
+            cloud = new Cloudinary(A);
+
+
         }
 
         // se crea una valiblae statica de cloudinay
         public static Cloudinary cloud;
 
         //Se crea una variable Account A que contendra todos las credenciasles de nuestro servidor 
-        Account A = new Account("cloudname", "apikey", "apiSecret");
+        Account A = new Account("pandaop", "632968835138977", "GDDZ6eYUYF5_upckyKxZqbpQm8w");
 
         private void CargarImagen(String ruta) {
             //metodo try para capturar los posibles errores
@@ -72,7 +73,8 @@ namespace PruebaCargaUrl
         {
             if (imagen !="")
             {
-                CargarImagen(imagen);
+                // CargarImagen(imagen);
+                MessageBox.Show( img_Delete("https://res.cloudinary.com/pandaop/image/upload/v1646087753/ylwzmagxvgnpop2j9bjp.jpg"));
             }
             else
             {
@@ -89,6 +91,32 @@ namespace PruebaCargaUrl
 
             imagen = ofdSelectorImagen.FileName.ToString();
             imagen = imagen.Replace('\\', '/');
+        }
+        public String img_Delete(String nombre_img)
+        {
+
+            try
+            {
+                cloud.Api.Timeout = int.MaxValue;
+                DeletionParams destroyParams = new DeletionParams(nombre_img)
+                {
+                    ResourceType = ResourceType.Image
+                };
+
+                DeletionResult destroyResult = cloud.Destroy(destroyParams);
+                return destroyResult.ToString();
+            }
+            catch (Exception)
+            {
+
+                return "Error";
+            }
+        }
+
+
+        private void FrmLoadsubir_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

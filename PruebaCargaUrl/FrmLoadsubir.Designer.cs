@@ -31,6 +31,7 @@
             this.ptbLoad = new System.Windows.Forms.PictureBox();
             this.ptbConfrirm = new System.Windows.Forms.PictureBox();
             this.btnload = new System.Windows.Forms.Button();
+            this.ofdSelectorImagen = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLoad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbConfrirm)).BeginInit();
             this.SuspendLayout();
@@ -72,10 +73,10 @@
             this.Controls.Add(this.ptbLoad);
             this.Name = "FrmLoadsubir";
             this.Text = "FrmLoadsubir";
+            this.Load += new System.EventHandler(this.FrmLoadsubir_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptbLoad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbConfrirm)).EndInit();
             this.ResumeLayout(false);
-            this.ofdSelectorImagen = new System.Windows.Forms.OpenFileDialog();
 
         }
 
