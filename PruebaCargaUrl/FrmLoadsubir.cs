@@ -18,6 +18,7 @@ namespace PruebaCargaUrl
     {
         //El stream,es una Transmisión de bytes que en conjunto contienen una imagen
         String imagen;
+        string public_id;
         public FrmLoadsubir()
         {
             InitializeComponent();
@@ -52,6 +53,10 @@ namespace PruebaCargaUrl
                 var uploadResult = cloud.Upload(uploadParams);
 
                 ruta = uploadResult.SecureUri.ToString();
+
+                public_id = uploadResult.PublicId.ToString();
+                MessageBox.Show(public_id);
+                MessageBox.Show(ruta);
                 MessageBox.Show("Foto subida correctamente al servidor cloudinary");
 
                 ptbConfrirm.ImageLocation = @"" + ruta;
@@ -73,8 +78,8 @@ namespace PruebaCargaUrl
         {
             if (imagen !="")
             {
-                // CargarImagen(imagen);
-                MessageBox.Show( img_Delete("https://res.cloudinary.com/pandaop/image/upload/v1646087753/ylwzmagxvgnpop2j9bjp.jpg"));
+                CargarImagen(imagen);
+                //MessageBox.Show( img_Delete("https://res.cloudinary.com/pandaop/image/upload/v1646087753/ylwzmagxvgnpop2j9bjp.jpg"));
             }
             else
             {
